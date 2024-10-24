@@ -35,12 +35,17 @@ class User {
 
 // In-memory data
 let users = [
-    new User(1, 'John Doe', 'johndoe', 'john@example.com', 'password123', new Date(), 'john.jpg', 'admin'),
+    new User(1, 'JUAN JOSE', 'JUAN', 'juanj@example.com', 'password123', new Date(), 'john.jpg', 'admin'),
     new User(2, 'Jane Smith', 'janesmith', 'jane@example.com', 'password123', new Date(), 'jane.jpg', 'user'),
     new User(3, 'Robert Brown', 'robbrown', 'robert@example.com', 'password123', new Date(), 'robert.jpg', 'user')
 ];
 
 // CRUD Endpoints
+
+// Redirect root to /users
+app.get('/', (req, res) => {
+    res.redirect('/users');
+});
 
 // Get all users
 app.get('/users', (req, res) => {
